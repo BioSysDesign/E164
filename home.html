@@ -1,15 +1,41 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--<title>Ayush Pandey</title>-->
+    <!--<title>About Me</title>-->
 	<title> Ayush Pandey </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="blog, accent, , Ayush Pandey, jekyll">
     <meta name="author" content="">
     
-    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        if(typeof YOUTUBE_VIDEO_MARGIN == 'undefined') {
+            YOUTUBE_VIDEO_MARGIN=5;
+        }
+        $('iframe').each(function(index,item) {
+            if($(item).attr('src').match(/(https?:)?\/\/www\.youtube\.com/)) {
+            var w=$(item).attr('width');
+            var h=$(item).attr('height');
+            var ar = h/w*100;
+            ar=ar.toFixed(2);
+            //Style iframe    
+            $(item).css('position','absolute');
+            $(item).css('top','0');
+            $(item).css('left','0');    
+            $(item).css('width','100%');
+            $(item).css('height','100%');
+            $(item).css('float','right');
+            $(item).css('margin-left','2px');
+            $(item).css('max-width',w+'px');
+            $(item).css('max-height', h+'px');        
+            $(item).wrap('<div style="max-width:'+w+'px;margin:0 auto; padding:'+YOUTUBE_VIDEO_MARGIN+'px;" />');
+            $(item).wrap('<div style="position: relative;padding-bottom: '+ar+'%; height: 0; overflow: hidden;" />');
+            }
+        });
+        });
+    </script>
     
     <meta name="description" content="">
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
@@ -20,7 +46,7 @@
     <!-- Facebook Open Graph -->
     <meta name="og:description" content="">
     <meta name="og:title" content="Ayush Pandey">
-    <meta name="og:url" content="contact.html">
+    <meta name="og:url" content="home.html">
     <meta name="og:type" content="article">
     
     
@@ -28,7 +54,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Ayush Pandey">
     <meta name="twitter:description" content="">
-    <meta name="twitter:url" content="contact.html">
+    <meta name="twitter:url" content="https://twitter.com/ayush9pandey">
     
         <meta name="twitter:image" content="">
     
@@ -44,7 +70,8 @@
                     
                     
                         </li>
- 
+                
+                    
                         <li class="alignable pull-right nav-list"><a href="home.html">About</a>
                         /
                         </li>
@@ -58,16 +85,11 @@
         <div style="clear:both"></div>
         <hr>
         
-            <div class="container content contact">
-                <p>Please use the course Piazza page for any course related questions on E164: Introduction to Biological System Design. Feel free to email me for any other queries: aypandey at hmc dot edu.</p>
+            <div class="container content">
+                <h2 id="about-me">About Me</h2>
 
-<ol>
-  <li><a href="https://github.com/biosysdesign">Github</a></li>
-  <li><a href="https://twitter.com/ayush9pandey">Twitter</a></li>
-</ol>
+<p><img class="profile-picture" src="Ayush1.jpg" /></p>
 
-            </div>
-        
-    </div>
+<p>I am an Adjunct Professor in the Engineering Department at Harvey Mudd College. For the ENGR 164 course webpage, please follow this <a href ="index.html">link</a>. To know more about me, you may visit my personal webpage <a href = "https://caltech.edu/~apandey/">here</a>.</p>
     
 </body>
