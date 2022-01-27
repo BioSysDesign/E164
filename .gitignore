@@ -1,3 +1,9 @@
+# Repository specific
+hw_solns/
+reading/my_numerical_integrators.py
+hw/e_coli_microscopy.jpg
+hw/growth_media.png 
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
