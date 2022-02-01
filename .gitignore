@@ -1,9 +1,10 @@
 # Repository specific
-hw_solns/
+hw_solns/*
 reading/my_numerical_integrators.py
 hw/e_coli_microscopy.jpg
 hw/growth_media.png 
-
+reading/week3_central_dogma_time.pdf
+reading/week3_fbs_tx_tl.pdf
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
